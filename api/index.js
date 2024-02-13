@@ -1,8 +1,10 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import path from "path";
 
 const app = express();
+const __dirnamme = path.resolve();
 const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/led", cors());
